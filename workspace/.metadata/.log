@@ -2012,3 +2012,30 @@ Binding(CTRL+U,
 
 !ENTRY com.nxp.mcuxpresso.core.datamodels 1 0 2020-11-19 19:29:20.790
 !MESSAGE Recreating part support. No part support available.
+
+!ENTRY com.crt.log 1 0 2020-11-19 19:43:06.355
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2020-11-19 19:43:06.356
+!MESSAGE RedlinkServer telnet session connected on port 3025->36616 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2020-11-19 19:43:13.321
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY com.crt.log 1 0 2020-11-19 19:43:34.221
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2020-11-19 19:43:35.222
+!MESSAGE RedlinkServer telnet session connected on port 3025->36620 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2020-11-19 19:43:43.607
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY com.crt.log 1 0 2020-11-19 19:44:05.161
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2020-11-19 19:44:06.163
+!MESSAGE RedlinkServer telnet session connected on port 3025->36632 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2020-11-19 19:44:13.341
+!MESSAGE Telnet session connected on port 3330->47130 @ 127.0.0.1

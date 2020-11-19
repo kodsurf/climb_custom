@@ -1090,3 +1090,38 @@ make: Nothing to be done for 'all'.
 00:19:16 **** Incremental Build of configuration Debug for project HardwareTests ****
 make -r -j12 all 
 make: Nothing to be done for 'all'.
+19:42:51 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+19:42:53 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/com/obc_ttc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/com/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/com/obc_ttc.d" -MT"src/mod/com/obc_ttc.o" -MT"src/mod/com/obc_ttc.d" -o "src/mod/com/obc_ttc.o" "../src/mod/com/obc_ttc.c"
+Finished building: ../src/mod/com/obc_ttc.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/led/led_controll.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       32192 B       256 KB     12.28%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6756 B        32 KB     20.62%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  32192	      0	   6756	  38948	   9824	HardwareTests.axf
+ 
+19:44:07 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+19:44:08 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+make: Nothing to be done for 'all'.
+19:44:09 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+make: Nothing to be done for 'all'.
