@@ -1,0 +1,12 @@
+{
+  "port": "22",
+  "baud": 9600,
+  "commands": [{
+    "short": "A",
+    "hexbytes": ["01", "aa" , "FF"]
+  },{
+    "short": "B",
+    "hexbytes": ["21", "1a" , "55"]
+  }
+  ]
+}

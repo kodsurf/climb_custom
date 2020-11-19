@@ -1,0 +1,1092 @@
+15:56:54 **** Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+15:56:57 **** Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       31540 B       256 KB     12.03%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6748 B        32 KB     20.59%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31540	      0	   6748	  38288	   9590	HardwareTests.axf
+ 
+15:57:16 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+15:57:18 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/main.d" -MT"src/mod/main.o" -MT"src/mod/main.d" -o "src/mod/main.o" "../src/mod/main.c"
+Finished building: ../src/mod/main.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       31540 B       256 KB     12.03%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6748 B        32 KB     20.59%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31540	      0	   6748	  38288	   9590	HardwareTests.axf
+ 
+15:58:12 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+15:58:13 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/main.d" -MT"src/mod/main.o" -MT"src/mod/main.d" -o "src/mod/main.o" "../src/mod/main.c"
+../src/mod/main.c: In function 'MainInit':
+../src/mod/main.c:63:2: warning: implicit declaration of function 'TimInit'; did you mean 'TtcInit'? [-Wimplicit-function-declaration]
+   63 |  TimInit();
+      |  ^~~~~~~
+      |  TtcInit
+../src/mod/main.c: In function 'MainMain':
+../src/mod/main.c:92:14: warning: implicit declaration of function 'TimMain'; did you mean 'TtcMain'? [-Wimplicit-function-declaration]
+   92 |  bool tick = TimMain();
+      |              ^~~~~~~
+      |              TtcMain
+Finished building: ../src/mod/main.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       31548 B       256 KB     12.03%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6748 B        32 KB     20.59%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31548	      0	   6748	  38296	   9598	HardwareTests.axf
+ 
+16:00:28 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+16:00:29 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/main.d" -MT"src/mod/main.o" -MT"src/mod/main.d" -o "src/mod/main.o" "../src/mod/main.c"
+../src/mod/main.c: In function 'MainInit':
+../src/mod/main.c:63:2: warning: implicit declaration of function 'TimInit'; did you mean 'TtcInit'? [-Wimplicit-function-declaration]
+   63 |  TimInit(33);
+      |  ^~~~~~~
+      |  TtcInit
+../src/mod/main.c: In function 'MainMain':
+../src/mod/main.c:92:14: warning: implicit declaration of function 'TimMain'; did you mean 'TtcMain'? [-Wimplicit-function-declaration]
+   92 |  bool tick = TimMain();
+      |              ^~~~~~~
+      |              TtcMain
+Finished building: ../src/mod/main.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       31556 B       256 KB     12.04%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6748 B        32 KB     20.59%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31556	      0	   6748	  38304	   95a0	HardwareTests.axf
+ 
+16:01:12 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+16:01:13 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/main.d" -MT"src/mod/main.o" -MT"src/mod/main.d" -o "src/mod/main.o" "../src/mod/main.c"
+../src/mod/main.c: In function 'MainInit':
+../src/mod/main.c:63:2: warning: implicit declaration of function 'TimInit'; did you mean 'TtcInit'? [-Wimplicit-function-declaration]
+   63 |  TimInit(33, "lkjkljlk");
+      |  ^~~~~~~
+      |  TtcInit
+../src/mod/main.c: In function 'MainMain':
+../src/mod/main.c:92:14: warning: implicit declaration of function 'TimMain'; did you mean 'TtcMain'? [-Wimplicit-function-declaration]
+   92 |  bool tick = TimMain();
+      |              ^~~~~~~
+      |              TtcMain
+Finished building: ../src/mod/main.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       31568 B       256 KB     12.04%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6748 B        32 KB     20.59%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31568	      0	   6748	  38316	   95ac	HardwareTests.axf
+ 
+16:01:49 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+16:01:50 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/main.d" -MT"src/mod/main.o" -MT"src/mod/main.d" -o "src/mod/main.o" "../src/mod/main.c"
+../src/mod/main.c: In function 'MainInit':
+../src/mod/main.c:63:2: warning: implicit declaration of function 'TimeInit'; did you mean 'TmpInit'? [-Wimplicit-function-declaration]
+   63 |  TimeInit(33, "lkjkljlk");
+      |  ^~~~~~~~
+      |  TmpInit
+../src/mod/main.c: In function 'MainMain':
+../src/mod/main.c:92:14: warning: implicit declaration of function 'TimMain'; did you mean 'TtcMain'? [-Wimplicit-function-declaration]
+   92 |  bool tick = TimMain();
+      |              ^~~~~~~
+      |              TtcMain
+Finished building: ../src/mod/main.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       30256 B       256 KB     11.54%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6748 B        32 KB     20.59%
+/usr/local/mcuxpressoide-11.2.1_4149/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.2.0.202001021529/tools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld: ./src/mod/main.o: in function `MainInit':
+        RamAHB32:          0 GB        32 KB      0.00%
+/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/HardwareTests/Debug/../src/mod/main.c:63: undefined reference to `TimeInit'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:48: HardwareTests.axf] Error 1
+"make -r -j12 all" terminated with exit code 2. Build might be incomplete.
+16:03:42 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+16:03:43 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/main.d" -MT"src/mod/main.o" -MT"src/mod/main.d" -o "src/mod/main.o" "../src/mod/main.c"
+Finished building: ../src/mod/main.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       31540 B       256 KB     12.03%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6748 B        32 KB     20.59%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31540	      0	   6748	  38288	   9590	HardwareTests.axf
+ 
+16:05:20 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+16:05:21 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/tim/timer.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/tim/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/tim/timer.d" -MT"src/mod/tim/timer.o" -MT"src/mod/tim/timer.d" -o "src/mod/tim/timer.o" "../src/mod/tim/timer.c"
+Finished building: ../src/mod/tim/timer.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       30228 B       256 KB     11.53%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6748 B        32 KB     20.59%
+/usr/local/mcuxpressoide-11.2.1_4149/ide/plugins/com.nxp.mcuxpresso.tools.linux_11.2.0.202001021529/tools/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/bin/ld: ./src/mod/main.o: in function `MainInit':
+        RamAHB32:          0 GB        32 KB      0.00%
+/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/HardwareTests/Debug/../src/mod/main.c:63: undefined reference to `TimInit'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:48: HardwareTests.axf] Error 1
+"make -r -j12 all" terminated with exit code 2. Build might be incomplete.
+16:06:28 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+16:06:29 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/tim/timer.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/tim/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/tim/timer.d" -MT"src/mod/tim/timer.o" -MT"src/mod/tim/timer.d" -o "src/mod/tim/timer.o" "../src/mod/tim/timer.c"
+Finished building: ../src/mod/tim/timer.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       31540 B       256 KB     12.03%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6748 B        32 KB     20.59%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31540	      0	   6748	  38288	   9590	HardwareTests.axf
+ 
+16:44:57 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+16:44:58 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/led/led_controll.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/led/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/led/led_controll.d" -MT"src/mod/led/led_controll.o" -MT"src/mod/led/led_controll.d" -o "src/mod/led/led_controll.o" "../src/mod/led/led_controll.c"
+../src/mod/led/led_controll.c: In function 'LedInit':
+../src/mod/led/led_controll.c:14:2: warning: implicit declaration of function 'Chip_GPIO_WriteDirBit' [-Wimplicit-function-declaration]
+   14 |  Chip_GPIO_WriteDirBit(LPC_GPIO, 0, 22, true);
+      |  ^~~~~~~~~~~~~~~~~~~~~
+../src/mod/led/led_controll.c:14:24: error: 'LPC_GPIO' undeclared (first use in this function)
+   14 |  Chip_GPIO_WriteDirBit(LPC_GPIO, 0, 22, true);
+      |                        ^~~~~~~~
+../src/mod/led/led_controll.c:14:24: note: each undeclared identifier is reported only once for each function it appears in
+../src/mod/led/led_controll.c:14:41: error: 'true' undeclared (first use in this function)
+   14 |  Chip_GPIO_WriteDirBit(LPC_GPIO, 0, 22, true);
+      |                                         ^~~~
+../src/mod/led/led_controll.c:19:2: warning: implicit declaration of function 'Chip_GPIO_SetPinOutHigh' [-Wimplicit-function-declaration]
+   19 |  Chip_GPIO_SetPinOutHigh(LPC_GPIO, 3, 26);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~
+../src/mod/led/led_controll.c: In function 'LedMain':
+../src/mod/led/led_controll.c:32:3: warning: implicit declaration of function 'Chip_GPIO_SetPinToggle' [-Wimplicit-function-declaration]
+   32 |   Chip_GPIO_SetPinToggle(LPC_GPIO, 3, 25);
+      |   ^~~~~~~~~~~~~~~~~~~~~~
+../src/mod/led/led_controll.c:32:26: error: 'LPC_GPIO' undeclared (first use in this function)
+   32 |   Chip_GPIO_SetPinToggle(LPC_GPIO, 3, 25);
+      |                          ^~~~~~~~
+make: *** [src/mod/led/subdir.mk:20: src/mod/led/led_controll.o] Error 1
+"make -r -j12 all" terminated with exit code 2. Build might be incomplete.
+16:45:00 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/led/led_controll.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/led/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/led/led_controll.d" -MT"src/mod/led/led_controll.o" -MT"src/mod/led/led_controll.d" -o "src/mod/led/led_controll.o" "../src/mod/led/led_controll.c"
+../src/mod/led/led_controll.c: In function 'LedInit':
+../src/mod/led/led_controll.c:14:2: warning: implicit declaration of function 'Chip_GPIO_WriteDirBit' [-Wimplicit-function-declaration]
+   14 |  Chip_GPIO_WriteDirBit(LPC_GPIO, 0, 22, true);
+      |  ^~~~~~~~~~~~~~~~~~~~~
+../src/mod/led/led_controll.c:14:24: error: 'LPC_GPIO' undeclared (first use in this function)
+   14 |  Chip_GPIO_WriteDirBit(LPC_GPIO, 0, 22, true);
+      |                        ^~~~~~~~
+../src/mod/led/led_controll.c:14:24: note: each undeclared identifier is reported only once for each function it appears in
+../src/mod/led/led_controll.c:14:41: error: 'true' undeclared (first use in this function)
+   14 |  Chip_GPIO_WriteDirBit(LPC_GPIO, 0, 22, true);
+      |                                         ^~~~
+../src/mod/led/led_controll.c:19:2: warning: implicit declaration of function 'Chip_GPIO_SetPinOutHigh' [-Wimplicit-function-declaration]
+   19 |  Chip_GPIO_SetPinOutHigh(LPC_GPIO, 3, 26);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~
+../src/mod/led/led_controll.c: In function 'LedMain':
+../src/mod/led/led_controll.c:32:3: warning: implicit declaration of function 'Chip_GPIO_SetPinToggle' [-Wimplicit-function-declaration]
+   32 |   Chip_GPIO_SetPinToggle(LPC_GPIO, 3, 25);
+      |   ^~~~~~~~~~~~~~~~~~~~~~
+../src/mod/led/led_controll.c:32:26: error: 'LPC_GPIO' undeclared (first use in this function)
+   32 |   Chip_GPIO_SetPinToggle(LPC_GPIO, 3, 25);
+      |                          ^~~~~~~~
+make: *** [src/mod/led/subdir.mk:20: src/mod/led/led_controll.o] Error 1
+"make -r -j12 all" terminated with exit code 2. Build might be incomplete.
+16:46:04 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+16:46:05 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/led/led_controll.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/led/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/led/led_controll.d" -MT"src/mod/led/led_controll.o" -MT"src/mod/led/led_controll.d" -o "src/mod/led/led_controll.o" "../src/mod/led/led_controll.c"
+Finished building: ../src/mod/led/led_controll.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/led/led_controll.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       31540 B       256 KB     12.03%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6748 B        32 KB     20.59%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31540	      0	   6748	  38288	   9590	HardwareTests.axf
+ 
+16:47:19 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+16:47:20 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/main.d" -MT"src/mod/main.o" -MT"src/mod/main.d" -o "src/mod/main.o" "../src/mod/main.c"
+../src/mod/main.c: In function 'MainInit':
+../src/mod/main.c:75:2: warning: implicit declaration of function 'LedInit'; did you mean 'FgdInit'? [-Wimplicit-function-declaration]
+   75 |  LedInit();
+      |  ^~~~~~~
+      |  FgdInit
+../src/mod/main.c: In function 'MainMain':
+../src/mod/main.c:90:2: warning: implicit declaration of function 'LedMain'; did you mean 'FgdMain'? [-Wimplicit-function-declaration]
+   90 |  LedMain();
+      |  ^~~~~~~
+      |  FgdMain
+Finished building: ../src/mod/main.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/led/led_controll.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       32204 B       256 KB     12.28%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6752 B        32 KB     20.61%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  32204	      0	   6752	  38956	   982c	HardwareTests.axf
+ 
+16:47:22 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+make: Nothing to be done for 'all'.
+16:49:38 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+16:49:40 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/main.d" -MT"src/mod/main.o" -MT"src/mod/main.d" -o "src/mod/main.o" "../src/mod/main.c"
+../src/mod/main.c: In function 'MainInit':
+../src/mod/main.c:75:2: warning: implicit declaration of function 'LedInit'; did you mean 'FgdInit'? [-Wimplicit-function-declaration]
+   75 |  LedInit();
+      |  ^~~~~~~
+      |  FgdInit
+../src/mod/main.c: In function 'MainMain':
+../src/mod/main.c:90:2: warning: implicit declaration of function 'LedMain'; did you mean 'FgdMain'? [-Wimplicit-function-declaration]
+   90 |  LedMain();
+      |  ^~~~~~~
+      |  FgdMain
+Finished building: ../src/mod/main.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/led/led_controll.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       31796 B       256 KB     12.13%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6752 B        32 KB     20.61%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31796	      0	   6752	  38548	   9694	HardwareTests.axf
+ 
+16:49:41 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+make: Nothing to be done for 'all'.
+16:53:18 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+16:53:19 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/led/led_controll.c
+Building file: ../src/mod/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/led/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/led/led_controll.d" -MT"src/mod/led/led_controll.o" -MT"src/mod/led/led_controll.d" -o "src/mod/led/led_controll.o" "../src/mod/led/led_controll.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/main.d" -MT"src/mod/main.o" -MT"src/mod/main.d" -o "src/mod/main.o" "../src/mod/main.c"
+../src/mod/main.c: In function 'MainInit':
+../src/mod/main.c:75:2: warning: implicit declaration of function 'LedInit'; did you mean 'FgdInit'? [-Wimplicit-function-declaration]
+   75 |  LedInit();
+      |  ^~~~~~~
+      |  FgdInit
+../src/mod/main.c: In function 'MainMain':
+../src/mod/main.c:101:3: warning: implicit declaration of function 'LedMain'; did you mean 'FgdMain'? [-Wimplicit-function-declaration]
+  101 |   LedMain();
+      |   ^~~~~~~
+      |   FgdMain
+Finished building: ../src/mod/led/led_controll.c
+ 
+Finished building: ../src/mod/main.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/led/led_controll.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       31796 B       256 KB     12.13%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6752 B        32 KB     20.61%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31796	      0	   6752	  38548	   9694	HardwareTests.axf
+ 
+16:53:21 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+make: Nothing to be done for 'all'.
+16:55:38 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+16:55:39 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/led/led_controll.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/led/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/led/led_controll.d" -MT"src/mod/led/led_controll.o" -MT"src/mod/led/led_controll.d" -o "src/mod/led/led_controll.o" "../src/mod/led/led_controll.c"
+Finished building: ../src/mod/led/led_controll.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/led/led_controll.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       31764 B       256 KB     12.12%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6752 B        32 KB     20.61%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31764	      0	   6752	  38516	   9674	HardwareTests.axf
+ 
+16:55:41 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+make: Nothing to be done for 'all'.
+17:02:10 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+17:02:11 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/tim/obc_rtc.c
+Building file: ../src/mod/tim/timer.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/tim/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/tim/obc_rtc.d" -MT"src/mod/tim/obc_rtc.o" -MT"src/mod/tim/obc_rtc.d" -o "src/mod/tim/obc_rtc.o" "../src/mod/tim/obc_rtc.c"
+Building file: ../src/mod/rad/radiation_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/tim/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/tim/timer.d" -MT"src/mod/tim/timer.o" -MT"src/mod/tim/timer.d" -o "src/mod/tim/timer.o" "../src/mod/tim/timer.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/rad/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/rad/radiation_test.d" -MT"src/mod/rad/radiation_test.o" -MT"src/mod/rad/radiation_test.d" -o "src/mod/rad/radiation_test.o" "../src/mod/rad/radiation_test.c"
+Building file: ../src/mod/mem/eeprom.c
+Building file: ../src/mod/mem/flash.c
+Invoking: MCU C Compiler
+Building file: ../src/mod/fgd/dosimeter.c
+Building file: ../src/mod/main.c
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/mem/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/mem/eeprom.d" -MT"src/mod/mem/eeprom.o" -MT"src/mod/mem/eeprom.d" -o "src/mod/mem/eeprom.o" "../src/mod/mem/eeprom.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/mem/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/mem/flash.d" -MT"src/mod/mem/flash.o" -MT"src/mod/mem/flash.d" -o "src/mod/mem/flash.o" "../src/mod/mem/flash.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/fgd/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/fgd/dosimeter.d" -MT"src/mod/fgd/dosimeter.o" -MT"src/mod/fgd/dosimeter.d" -o "src/mod/fgd/dosimeter.o" "../src/mod/fgd/dosimeter.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/main.d" -MT"src/mod/main.o" -MT"src/mod/main.d" -o "src/mod/main.o" "../src/mod/main.c"
+../src/mod/main.c: In function 'MainInit':
+../src/mod/main.c:75:2: warning: implicit declaration of function 'LedInit'; did you mean 'FgdInit'? [-Wimplicit-function-declaration]
+   75 |  LedInit();
+      |  ^~~~~~~
+      |  FgdInit
+../src/mod/main.c: In function 'MainMain':
+../src/mod/main.c:101:3: warning: implicit declaration of function 'LedMain'; did you mean 'FgdMain'? [-Wimplicit-function-declaration]
+  101 |   LedMain();
+      |   ^~~~~~~
+      |   FgdMain
+Finished building: ../src/mod/fgd/dosimeter.c
+ 
+Finished building: ../src/mod/rad/radiation_test.c
+ 
+Finished building: ../src/mod/mem/eeprom.c
+Finished building: ../src/mod/main.c
+Finished building: ../src/mod/tim/timer.c
+ 
+ 
+ 
+Finished building: ../src/mod/tim/obc_rtc.c
+ 
+Finished building: ../src/mod/mem/flash.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/led/led_controll.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       31764 B       256 KB     12.12%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6752 B        32 KB     20.61%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31764	      0	   6752	  38516	   9674	HardwareTests.axf
+ 
+17:02:13 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+make: Nothing to be done for 'all'.
+21:33:10 **** Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+21:33:14 **** Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/led/led_controll.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       31764 B       256 KB     12.12%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6752 B        32 KB     20.61%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31764	      0	   6752	  38516	   9674	HardwareTests.axf
+ 
+21:33:17 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+make: Nothing to be done for 'all'.
+13:00:18 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+13:00:21 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/cli/cli.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/cli/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/cli/cli.d" -MT"src/mod/cli/cli.o" -MT"src/mod/cli/cli.d" -o "src/mod/cli/cli.o" "../src/mod/cli/cli.c"
+Finished building: ../src/mod/cli/cli.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/led/led_controll.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       31764 B       256 KB     12.12%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6752 B        32 KB     20.61%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31764	      0	   6752	  38516	   9674	HardwareTests.axf
+ 
+13:00:36 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+13:00:38 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/cli/cli.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/cli/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/cli/cli.d" -MT"src/mod/cli/cli.o" -MT"src/mod/cli/cli.d" -o "src/mod/cli/cli.o" "../src/mod/cli/cli.c"
+Finished building: ../src/mod/cli/cli.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/led/led_controll.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       31872 B       256 KB     12.16%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6752 B        32 KB     20.61%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31872	      0	   6752	  38624	   96e0	HardwareTests.axf
+ 
+13:29:00 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+13:29:01 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/cli/cli.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/cli/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/cli/cli.d" -MT"src/mod/cli/cli.o" -MT"src/mod/cli/cli.d" -o "src/mod/cli/cli.o" "../src/mod/cli/cli.c"
+../src/mod/cli/cli.c: In function 'CliMain':
+../src/mod/cli/cli.c:193:8: warning: unused variable 'myStr' [-Wunused-variable]
+  193 |  char *myStr = "Hello";
+      |        ^~~~~
+Finished building: ../src/mod/cli/cli.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/led/led_controll.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       31788 B       256 KB     12.13%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6756 B        32 KB     20.62%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31788	      0	   6756	  38544	   9690	HardwareTests.axf
+ 
+13:29:03 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+make: Nothing to be done for 'all'.
+13:29:46 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+13:29:47 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+make: Nothing to be done for 'all'.
+13:29:49 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+make: Nothing to be done for 'all'.
+13:34:42 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+13:34:43 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/cli/cli.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/cli/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/cli/cli.d" -MT"src/mod/cli/cli.o" -MT"src/mod/cli/cli.d" -o "src/mod/cli/cli.o" "../src/mod/cli/cli.c"
+../src/mod/cli/cli.c: In function 'CliMain':
+../src/mod/cli/cli.c:193:8: warning: unused variable 'myStr' [-Wunused-variable]
+  193 |  char *myStr = "Hello";
+      |        ^~~~~
+Finished building: ../src/mod/cli/cli.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/led/led_controll.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       31800 B       256 KB     12.13%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6756 B        32 KB     20.62%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31800	      0	   6756	  38556	   969c	HardwareTests.axf
+ 
+13:34:44 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+make: Nothing to be done for 'all'.
+13:37:23 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+13:37:24 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/cli/cli.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/cli/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/cli/cli.d" -MT"src/mod/cli/cli.o" -MT"src/mod/cli/cli.d" -o "src/mod/cli/cli.o" "../src/mod/cli/cli.c"
+../src/mod/cli/cli.c: In function 'CliMain':
+../src/mod/cli/cli.c:193:8: warning: unused variable 'myStr' [-Wunused-variable]
+  193 |  char *myStr = "Hello";
+      |        ^~~~~
+Finished building: ../src/mod/cli/cli.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/led/led_controll.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       31824 B       256 KB     12.14%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6756 B        32 KB     20.62%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31824	      0	   6756	  38580	   96b4	HardwareTests.axf
+ 
+13:37:25 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+make: Nothing to be done for 'all'.
+13:39:52 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+13:39:52 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/cli/cli.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/cli/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/cli/cli.d" -MT"src/mod/cli/cli.o" -MT"src/mod/cli/cli.d" -o "src/mod/cli/cli.o" "../src/mod/cli/cli.c"
+../src/mod/cli/cli.c: In function 'CliMain':
+../src/mod/cli/cli.c:210:34: error: expected ';' before 'printf'
+  210 |    printf("PRINT RECEIVED CMD\n")
+      |                                  ^
+      |                                  ;
+  211 |    printf (cliRxBuffer);
+      |    ~~~~~~                         
+../src/mod/cli/cli.c:212:42: error: expected ';' before 'processLine'
+  212 |    printf("\n  GOING to process line \n")
+      |                                          ^
+      |                                          ;
+  213 |    processLine();
+      |    ~~~~~~~~~~~                            
+../src/mod/cli/cli.c:193:8: warning: unused variable 'myStr' [-Wunused-variable]
+  193 |  char *myStr = "Hello";
+      |        ^~~~~
+make: *** [src/mod/cli/subdir.mk:20: src/mod/cli/cli.o] Error 1
+"make -r -j12 all" terminated with exit code 2. Build might be incomplete.
+13:39:54 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/cli/cli.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/cli/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/cli/cli.d" -MT"src/mod/cli/cli.o" -MT"src/mod/cli/cli.d" -o "src/mod/cli/cli.o" "../src/mod/cli/cli.c"
+../src/mod/cli/cli.c: In function 'CliMain':
+../src/mod/cli/cli.c:210:34: error: expected ';' before 'printf'
+  210 |    printf("PRINT RECEIVED CMD\n")
+      |                                  ^
+      |                                  ;
+  211 |    printf (cliRxBuffer);
+      |    ~~~~~~                         
+../src/mod/cli/cli.c:212:42: error: expected ';' before 'processLine'
+  212 |    printf("\n  GOING to process line \n")
+      |                                          ^
+      |                                          ;
+  213 |    processLine();
+      |    ~~~~~~~~~~~                            
+../src/mod/cli/cli.c:193:8: warning: unused variable 'myStr' [-Wunused-variable]
+  193 |  char *myStr = "Hello";
+      |        ^~~~~
+make: *** [src/mod/cli/subdir.mk:20: src/mod/cli/cli.o] Error 1
+"make -r -j12 all" terminated with exit code 2. Build might be incomplete.
+13:40:08 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+13:40:09 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/cli/cli.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/cli/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/cli/cli.d" -MT"src/mod/cli/cli.o" -MT"src/mod/cli/cli.d" -o "src/mod/cli/cli.o" "../src/mod/cli/cli.c"
+../src/mod/cli/cli.c: In function 'CliMain':
+../src/mod/cli/cli.c:193:8: warning: unused variable 'myStr' [-Wunused-variable]
+  193 |  char *myStr = "Hello";
+      |        ^~~~~
+Finished building: ../src/mod/cli/cli.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/led/led_controll.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       31880 B       256 KB     12.16%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6756 B        32 KB     20.62%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31880	      0	   6756	  38636	   96ec	HardwareTests.axf
+ 
+13:40:10 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+make: Nothing to be done for 'all'.
+23:32:28 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+23:32:30 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/led/led_controll.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       31880 B       256 KB     12.16%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6756 B        32 KB     20.62%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31880	      0	   6756	  38636	   96ec	HardwareTests.axf
+ 
+23:41:20 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+23:41:22 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/cli/cli.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/cli/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/cli/cli.d" -MT"src/mod/cli/cli.o" -MT"src/mod/cli/cli.d" -o "src/mod/cli/cli.o" "../src/mod/cli/cli.c"
+../src/mod/cli/cli.c: In function 'CliMain':
+../src/mod/cli/cli.c:194:8: warning: unused variable 'myStr' [-Wunused-variable]
+  194 |  char *myStr = "Hello";
+      |        ^~~~~
+Finished building: ../src/mod/cli/cli.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/led/led_controll.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       31904 B       256 KB     12.17%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6756 B        32 KB     20.62%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31904	      0	   6756	  38660	   9704	HardwareTests.axf
+ 
+23:41:23 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+make: Nothing to be done for 'all'.
+23:44:54 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+23:44:55 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/cli/cli.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/cli/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/cli/cli.d" -MT"src/mod/cli/cli.o" -MT"src/mod/cli/cli.d" -o "src/mod/cli/cli.o" "../src/mod/cli/cli.c"
+../src/mod/cli/cli.c: In function 'MyOwnFunction':
+../src/mod/cli/cli.c:183:33: error: expected ';' before '}' token
+  183 |  printf("Hiiiii my new command")
+      |                                 ^
+      |                                 ;
+  184 | }
+      | ~                                
+../src/mod/cli/cli.c: In function 'CliInit':
+../src/mod/cli/cli.c:189:29: warning: passing argument 2 of 'RegisterCommand' from incompatible pointer type [-Wincompatible-pointer-types]
+  189 |  RegisterCommand("testCMD", MyOwnFunction); //you register commands here
+      |                             ^~~~~~~~~~~~~
+      |                             |
+      |                             void (*)(void)
+../src/mod/cli/cli.c:169:43: note: expected 'void (*)(int,  char **)' but argument is of type 'void (*)(void)'
+  169 | void RegisterCommand(char* cmdStr, void (*callback)(int argc, char *argv[])) {
+      |                                    ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/mod/cli/cli.c: In function 'CliMain':
+../src/mod/cli/cli.c:199:8: warning: unused variable 'myStr' [-Wunused-variable]
+  199 |  char *myStr = "Hello";
+      |        ^~~~~
+make: *** [src/mod/cli/subdir.mk:20: src/mod/cli/cli.o] Error 1
+"make -r -j12 all" terminated with exit code 2. Build might be incomplete.
+23:45:30 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+23:45:30 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/cli/cli.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/cli/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/cli/cli.d" -MT"src/mod/cli/cli.o" -MT"src/mod/cli/cli.d" -o "src/mod/cli/cli.o" "../src/mod/cli/cli.c"
+../src/mod/cli/cli.c: In function 'CliInit':
+../src/mod/cli/cli.c:189:29: warning: passing argument 2 of 'RegisterCommand' from incompatible pointer type [-Wincompatible-pointer-types]
+  189 |  RegisterCommand("testCMD", MyOwnFunction); //you register commands here
+      |                             ^~~~~~~~~~~~~
+      |                             |
+      |                             void (*)(void)
+../src/mod/cli/cli.c:169:43: note: expected 'void (*)(int,  char **)' but argument is of type 'void (*)(void)'
+  169 | void RegisterCommand(char* cmdStr, void (*callback)(int argc, char *argv[])) {
+      |                                    ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/mod/cli/cli.c: In function 'CliMain':
+../src/mod/cli/cli.c:199:8: warning: unused variable 'myStr' [-Wunused-variable]
+  199 |  char *myStr = "Hello";
+      |        ^~~~~
+Finished building: ../src/mod/cli/cli.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/led/led_controll.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       31952 B       256 KB     12.19%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6756 B        32 KB     20.62%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31952	      0	   6756	  38708	   9734	HardwareTests.axf
+ 
+23:46:53 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+23:46:54 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/cli/cli.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/cli/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/cli/cli.d" -MT"src/mod/cli/cli.o" -MT"src/mod/cli/cli.d" -o "src/mod/cli/cli.o" "../src/mod/cli/cli.c"
+../src/mod/cli/cli.c: In function 'CliInit':
+../src/mod/cli/cli.c:190:29: warning: passing argument 2 of 'RegisterCommand' from incompatible pointer type [-Wincompatible-pointer-types]
+  190 |  RegisterCommand("testCMD", MyOwnFunction); //you register commands here
+      |                             ^~~~~~~~~~~~~
+      |                             |
+      |                             void (*)(void)
+../src/mod/cli/cli.c:170:43: note: expected 'void (*)(int,  char **)' but argument is of type 'void (*)(void)'
+  170 | void RegisterCommand(char* cmdStr, void (*callback)(int argc, char *argv[])) {
+      |                                    ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/mod/cli/cli.c: In function 'CliMain':
+../src/mod/cli/cli.c:200:8: warning: unused variable 'myStr' [-Wunused-variable]
+  200 |  char *myStr = "Hello";
+      |        ^~~~~
+Finished building: ../src/mod/cli/cli.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/led/led_controll.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       31952 B       256 KB     12.19%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6756 B        32 KB     20.62%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  31952	      0	   6756	  38708	   9734	HardwareTests.axf
+ 
+23:46:55 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+make: Nothing to be done for 'all'.
+23:50:08 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+23:50:09 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/cli/cli.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/cli/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/cli/cli.d" -MT"src/mod/cli/cli.o" -MT"src/mod/cli/cli.d" -o "src/mod/cli/cli.o" "../src/mod/cli/cli.c"
+../src/mod/cli/cli.c: In function 'CliInit':
+../src/mod/cli/cli.c:191:29: warning: passing argument 2 of 'RegisterCommand' from incompatible pointer type [-Wincompatible-pointer-types]
+  191 |  RegisterCommand("testCMD", MyOwnFunction); //you register commands here
+      |                             ^~~~~~~~~~~~~
+      |                             |
+      |                             void (*)(void)
+../src/mod/cli/cli.c:170:43: note: expected 'void (*)(int,  char **)' but argument is of type 'void (*)(void)'
+  170 | void RegisterCommand(char* cmdStr, void (*callback)(int argc, char *argv[])) {
+      |                                    ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/mod/cli/cli.c: In function 'CliMain':
+../src/mod/cli/cli.c:201:8: warning: unused variable 'myStr' [-Wunused-variable]
+  201 |  char *myStr = "Hello";
+      |        ^~~~~
+Finished building: ../src/mod/cli/cli.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/led/led_controll.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       32008 B       256 KB     12.21%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6756 B        32 KB     20.62%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  32008	      0	   6756	  38764	   976c	HardwareTests.axf
+ 
+23:50:10 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+make: Nothing to be done for 'all'.
+23:51:57 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+23:51:58 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+Building file: ../src/mod/cli/cli.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_LPCOPEN -DNO_BOARD_LIB -D__LPC17XX__ -D__REDLIB__ -I"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fmerge-constants -fmacro-prefix-map="../src/mod/cli/"=. -mcpu=cortex-m3 -mthumb -fstack-usage -specs=redlib.specs -MMD -MP -MF"src/mod/cli/cli.d" -MT"src/mod/cli/cli.o" -MT"src/mod/cli/cli.d" -o "src/mod/cli/cli.o" "../src/mod/cli/cli.c"
+../src/mod/cli/cli.c: In function 'CliInit':
+../src/mod/cli/cli.c:192:29: warning: passing argument 2 of 'RegisterCommand' from incompatible pointer type [-Wincompatible-pointer-types]
+  192 |  RegisterCommand("testCMD", MyOwnFunction); //you register commands here
+      |                             ^~~~~~~~~~~~~
+      |                             |
+      |                             void (*)(void)
+../src/mod/cli/cli.c:170:43: note: expected 'void (*)(int,  char **)' but argument is of type 'void (*)(void)'
+  170 | void RegisterCommand(char* cmdStr, void (*callback)(int argc, char *argv[])) {
+      |                                    ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/mod/cli/cli.c: In function 'CliMain':
+../src/mod/cli/cli.c:202:8: warning: unused variable 'myStr' [-Wunused-variable]
+  202 |  char *myStr = "Hello";
+      |        ^~~~~
+Finished building: ../src/mod/cli/cli.c
+ 
+Building target: HardwareTests.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/jevgeni/climb_base/Climb-Obc-Hardwaretest/lpc_chip_175x_6x/Debug" -Xlinker -Map="HardwareTests.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "HardwareTests_Debug.ld" -o "HardwareTests.axf"  ./src/mod/tim/obc_rtc.o ./src/mod/tim/timer.o  ./src/mod/thr/thruster.o  ./src/mod/sen/obc_adc.o ./src/mod/sen/temp.o  ./src/mod/rad/prgflash2_patterns.o ./src/mod/rad/radiation_test.o ./src/mod/rad/radtst_extmemory.o  ./src/mod/mem/eeprom.o ./src/mod/mem/flash.o ./src/mod/mem/mram.o  ./src/mod/led/led_controll.o  ./src/mod/fgd/dosimeter.o  ./src/mod/crc/obc_checksums.o  ./src/mod/com/obc_ttc.o  ./src/mod/cli/cli.o  ./src/mod/main.o  ./src/layer1/UART/uart.o  ./src/layer1/SSP/obc_ssp.o  ./src/layer1/SPI/spi.o  ./src/layer1/I2C/obc_i2c_int.o ./src/layer1/I2C/obc_i2c_rb.o  ./src/hw_obc/board.o  ./src/hw_lpcx/board.o  ./src/HardwareTests.o ./src/cr_startup_lpc175x_6x.o ./src/crp.o ./src/sysinit.o   -llpc_chip_175x_6x
+Memory region         Used Size  Region Size  %age Used
+     MFlash256_0:       32192 B       256 KB     12.28%
+     MFlash256_1:          0 GB       256 KB      0.00%
+        RamLoc32:        6756 B        32 KB     20.62%
+        RamAHB32:          0 GB        32 KB      0.00%
+Finished building target: HardwareTests.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "HardwareTests.axf"; # arm-none-eabi-objcopy -v -O binary "HardwareTests.axf" "HardwareTests.bin" ; # checksum -p LPC1769 -d "HardwareTests.bin";
+   text	   data	    bss	    dec	    hex	filename
+  32192	      0	   6756	  38948	   9824	HardwareTests.axf
+ 
+23:51:59 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+make: Nothing to be done for 'all'.
+00:19:14 **** Incremental Build of configuration Debug for project lpc_chip_175x_6x ****
+make -r all 
+make: Nothing to be done for 'all'.
+00:19:15 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+make: Nothing to be done for 'all'.
+00:19:16 **** Incremental Build of configuration Debug for project HardwareTests ****
+make -r -j12 all 
+make: Nothing to be done for 'all'.
